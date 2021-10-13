@@ -1,3 +1,5 @@
+package GroceryPart;
+
 public class GroceriesInfo implements Groceries{
     @Override
     public void riceList() {
@@ -240,4 +242,5 @@ public class GroceriesInfo implements Groceries{
         System.out.println("\n6. Clemon\nPer litre: 45 BDT\n");
         System.out.println("\n7. Miranda Orange\nPer litre: 50 BDT\n\n");
     }
+
 }

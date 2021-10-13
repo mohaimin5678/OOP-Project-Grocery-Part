@@ -1,3 +1,4 @@
+package GroceryPart;
 import java.util.Scanner;
 public class GroceryMain {
     public static void main(String[] args){
@@ -14,7 +15,7 @@ public class GroceryMain {
             if (option2 == 1){
                 Groceries listrice = new GroceriesInfo();
                 listrice.riceList();
-                }
+            }
             else if (option2 == 2){
                 Groceries listdal = new GroceriesInfo();
                 listdal.dalList();
@@ -86,6 +87,6 @@ public class GroceryMain {
             else{
                 System.out.println("\nInvalid number\n\n");
             }
-            }
         }
     }
+}

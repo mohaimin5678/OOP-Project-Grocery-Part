@@ -1,3 +1,5 @@
+package GroceryPart;
+
 public interface Groceries {
     public void riceList() ;
     public void dalList();
