@@ -10,7 +10,27 @@ public class GroceryMain {
         int num = input.nextInt();
         switch (num){
             case 1:
-                riceList();
+                System.out.println("These are the list of different types of rice\n");
+                RiceList shaadChiniguraAromaticRice = new RiceList("Shaad Chinigura Aromatic Rice",130);
+                RiceList khusbooPremiumKalijiraRice = new RiceList("Khusboo Premium Kalijira Rice", 135);
+                RiceList chiniguraRice = new RiceList("Chinigura Rice",99);
+                RiceList rupchandaChiniguraPremiumAromaticRice = new RiceList("Rupchanda Chinigura Premium Aromatic Rice", 135);
+                RiceList greenGroceryTulshimalaPolauRice = new RiceList("Green Grocery Tulshimala Polau Rice", 125);
+                RiceList chiniguraPolauRice = new RiceList("Chinigura Polau Rice", 130);
+                RiceList premiumAtashChal = new RiceList("Premium Atash Chal", 60);
+                RiceList tariJirashailRice = new RiceList("tari Jirashail Rice", 66);
+                RiceList supremeBasmatiRice = new RiceList("Supreme Basmati Rice", 250);
+                RiceList ispahaniParbonJirashailRice = new RiceList("Ispahani Parbon Jirashail Rice", 80);
+                RiceList premiumMiniketRice = new RiceList("Premium Miniket Rice", 65);
+                RiceList pranChiniguraRice = new RiceList("Pran Chinigura Rice", 125);
+                RiceList[] rice = new RiceList[]{shaadChiniguraAromaticRice, khusbooPremiumKalijiraRice,chiniguraRice,rupchandaChiniguraPremiumAromaticRice,greenGroceryTulshimalaPolauRice,chiniguraPolauRice,premiumAtashChal,tariJirashailRice,supremeBasmatiRice,ispahaniParbonJirashailRice,premiumMiniketRice,pranChiniguraRice};
+                int j = 1;
+                for (int i = 0; i < rice.length; i++){
+
+                    System.out.println("No. "+j +" "+ rice[i].name + "\nPer kg: "+rice[i].price + " BDT\n");
+                    j++;
+                }
+                System.out.println("\n");
                 BackGroMain();
                 break;
             case 2:
@@ -22,15 +42,33 @@ public class GroceryMain {
                 BackGroMain();
                 break;
             case 4:
-                flourList();
+                Flour flour = new ListOfFlour();
+                flour.flourList();
                 BackGroMain();
                 break;
             case 5:
-                masalaList();
+                Masala masala = new ListOfMasala();
+                masala.intro();
+                masala.masalaList();
                 BackGroMain();
                 break;
             case 6:
-                sujiList();
+                System.out.println("These are the list of different types of Suji\n");
+                Suji ifadSuji = new Suji("Ifad Suji");
+                Suji teerSemolinaSuji = new Suji("Teer Semolina Suji");
+                Suji bashundharaSuji = new Suji("Bashundhara Suji");
+                Suji freshSuji = new Suji("Fresh Suji");
+                Suji aciPureSuji = new Suji("ACI Pure Suji");
+                Suji muskaanSuji = new Suji("Muskaan Suji");
+                Suji shaadSuji = new Suji("Shaad Suji");
+                Suji pustiSuji = new Suji("Pusti Suji");
+                Suji suji[] = new Suji[]{ifadSuji,teerSemolinaSuji,bashundharaSuji,freshSuji,aciPureSuji,muskaanSuji,shaadSuji,pustiSuji};
+                int s = 1;
+                for (int i=0; i < suji.length; i++){
+                    System.out.println("No. "+s+" "+suji[i].name+"\nPer kg: "+suji[i].price+" BDT\n");
+                    s++;
+                }
+                System.out.println("\n");
                 BackGroMain();
                 break;
             case 7:
@@ -42,7 +80,8 @@ public class GroceryMain {
                 BackGroMain();
                 break;
             case 9:
-                edibleOilList();
+                EdibleOil edibleOil = new ListOfEdibleOil();
+                edibleOil.edibleOilList();
                 BackGroMain();
                 break;
             case 10:
@@ -50,11 +89,36 @@ public class GroceryMain {
                 BackGroMain();
                 break;
             case 11:
-                teaBagList();
+                System.out.println("These are the list of different types of Tea Bags\n");
+                TeaList ispahaniMirzaporeTeaBag = new TeaList("Ispahani Mirzapore Tea Bag", 50, 85);
+                TeaList kaziGreenTea = new TeaList("Kazi & Kazi Green Tea",50,210);
+                TeaList tetleyPremiumTeaBags = new TeaList("Tetley Premium Tea Bags", 50, 75);
+                TeaList finlaysPureGreenTea = new TeaList("Finlays Pure Green Tea", 50,110);
+
+                TeaList tea[] = new TeaList[]{ispahaniMirzaporeTeaBag, kaziGreenTea, tetleyPremiumTeaBags, finlaysPureGreenTea};
+                int t = 1;
+                for (int i=0; i< tea.length; i++){
+                    System.out.println("No. "+t+" "+tea[i].name+"\nPer "+tea[i].pieces+" pcs: "+tea[i].price+" BDT\n");
+                    t++;
+                }
+                System.out.println("\n");
                 BackGroMain();
                 break;
             case 12:
-                teaList();
+                System.out.println("These are the list of different types of Tea Poly Bags\n");
+                TeaList brookeBondTaazaBlackTea = new TeaList("Brooke Bond Taaza Black Tea", 500);
+                TeaList ispahaniMirzaporeBestLeafTea = new TeaList("Ispahani Mirzapore Best Leaf Tea", 475);
+                TeaList nesteaIcedTeaLemon = new TeaList("Nestea Iced Tea Lemon", 600);
+                TeaList finlayPremiumTea = new TeaList("Finlay Premium Tea", 520);
+                TeaList muskanBopTea = new TeaList("Muskan BOP Tea", 360);
+                TeaList ispahaniZareenPremiumTea = new TeaList("Ispahani Zareen Premium Tea", 600);
+                TeaList tea1[] = new TeaList[]{brookeBondTaazaBlackTea, ispahaniMirzaporeBestLeafTea, nesteaIcedTeaLemon, finlayPremiumTea, muskanBopTea,ispahaniZareenPremiumTea};
+                int tb = 1;
+                for (int i=0; i <tea1.length; i++){
+                    System.out.println("No. "+tb+ " "+tea1[i].name + "\nPer kg: "+tea1[i].price+" BDT\n");
+                    tb++;
+                }
+                System.out.println("\n");
                 BackGroMain();
                 break;
             case 13:
@@ -66,7 +130,9 @@ public class GroceryMain {
                 BackGroMain();
                 break;
             case 15:
-                biscuitList();
+                Biscuit biscuit = new ListOfBiscuit();
+                biscuit.intro();
+                biscuit.biscuitList();
                 BackGroMain();
                 break;
             case 16:
@@ -89,20 +155,7 @@ public class GroceryMain {
                 break;
         }
     }
-    public void riceList(){
-        System.out.println("\n1.  Shaad Chinigura Aromatic Rice\nPer Kg: 130 BDT\n");
-        System.out.println("\n2.  Khusboo Premium Kalijira Rice\nPer Kg: 135 BDT\n");
-        System.out.println("\n3.  Chinigura Rice\nPer kg: 99 BDT\n");
-        System.out.println("\n4.  Rupchanda Chinigura Premium Aromatic Rice \nPer Kg: 135 BDT\n");
-        System.out.println("\n5.  Green Grocery Tulshimala Polau Rice\nPer Kg: 125 BDT\n");
-        System.out.println("\n6.  Chinigura Polau Rice\nPer Kg: 130 BDT\n");
-        System.out.println("\n7.  Premium Atash Chal\nPer Kg: 60 BDT\n");
-        System.out.println("\n8.  Katari Jirashail Rice\nPer Kg: 66 BDT\n");
-        System.out.println("\n9.  Supreme Basmati Rice\nPer Kg: 250 BDT\n");
-        System.out.println("\n10. Ispahani Parbon Jirashail Rice\nPer Kg: 80 BDT\n");
-        System.out.println("\n11. Premium Miniket Rice\nPer Kg: 65 BDT\n");
-        System.out.println("\n12. Pran Chinigura Rice\nPer Kg: 125 BDT\n\n");
-    }
+
     public void dalList(){
         System.out.println("\n1.  Chola Boot Dal\nPer Kg: 70 BDT\n");
         System.out.println("\n2.  Moshur Dal (Deshi)\nPer Kg: 109 BDT\n");
@@ -126,45 +179,8 @@ public class GroceryMain {
         System.out.println("\n6. Molla Super Salt\nPer Kg: 32 BDT\n");
         System.out.println("\n7. Sena Salt\nPer Kg: 32 BDT\n\n");
     }
-    public void flourList(){
-        System.out.println("\n1.  Teer Atta\nPer Kg: 42 BDT\n");
-        System.out.println("\n2.  Teer Maida Flour\nPer Kg: 50 BDT\n");
-        System.out.println("\n3.  Bashundhara Atta\nPer Kg: 45 BDT\n");
-        System.out.println("\n4.  Ifad Atta\nPer Kg: 40 BDT\n");
-        System.out.println("\n5.  Fresh Atta\nPer Kg: 40 BDT\n");
-        System.out.println("\n6.  Teer Whole Wheat Atta\nPer Kg: 44 BDT\n");
-        System.out.println("\n7.  Ifad Brown Atta\nPer Kg: 45 BDT\n");
-        System.out.println("\n8.  Rice Flour\nPer Kg: 80 BDT\n");
-        System.out.println("\n9.  Bashundhara Brown Atta\nPer Kg: 45 BDT\n");
-        System.out.println("\n10. Fresh Maida\nPer Kg: 50 BDT\n");
-        System.out.println("\n11. Ifad Maida\nPer Kg: 50 BDT\n");
-        System.out.println("\n12. ACI Pure Maida\nPer Kg: 48 BDT\n");
-        System.out.println("\n13. ACI Pure Brown Atta\nPer Kg: 45 BDT\n");
-        System.out.println("\n14. Shaad Atta\nPer Kg: 42 BDT\n");
-        System.out.println("\n15. Shaad Maida\nPer Kg: 50 BDT\n");
-        System.out.println("\n16. Pusti Atta\nPer Kg: 40 BDT\n");
-        System.out.println("\n17. Shaad Brown Atta\nPer Kg: 45 BDT\n");
-        System.out.println("\n18. Pusti Maida\nPer Kg: 49 BDT\n");
-        System.out.println("\n19. BPM Red Rice Flour\nPer Kg: 100 BDT\n");
-        System.out.println("\n20. Fresh Whole Wheat Atta\nPer Kg: 44 BDT\n\n");
-    }
-    public void masalaList(){
-        System.out.println("\n1.  Cumin Seed (Jira)\nPer Kg: 390  BDT\n");
-        System.out.println("\n2.  Cinnamon (Daruchini)\nPer Kg: 790  BDT\n");
-        System.out.println("\n3.  Cardamom (Elachi)\nPer Kg: 2980 BDT\n");
-        System.out.println("\n4.  Radhuni Turmeric Powder (Holud)\nPer Kg: 475  BDT\n");
-        System.out.println("\n5.  Radhuni Chilli (Morich) Powder\nPer Kg: 500  BDT\n");
-        System.out.println("\n6.  Dried Chillies (Shukna Morich)\nPer Kg: 290  BDT\n");
-        System.out.println("\n7.  Bay Leaves (Tejpata)\nPer Kg: 190  BDT\n");
-        System.out.println("\n8.  Radhuni Cumin (Jeera) Powder\nPer Kg: 800  BDT\n");
-        System.out.println("\n9.  Cloves (Lobongo)\nPer Kg: 2580 BDT\n");
-        System.out.println("\n10. Radhuni Coriander (Dhoniya) Powder\nPer Kg: 345  BDT\n");
-        System.out.println("\n11. Black Cumin (Kalo Jira)\nPer Kg: 490  BDT\n");
-        System.out.println("\n12. Radhuni Garam Masala\nPer Kg: 1475 BDT\n");
-        System.out.println("\n13. Fenugreek Seed (Methi)\nPer Kg: 190  BDT\n");
-        System.out.println("\n14. Radhuni Roast Masala\nPer Kg: 1400 BDT\n");
-        System.out.println("\n15. Mix Spice (Pach Foron)\nPer Kg: 290  BDT\n\n");
-    }
+
+
     public void sujiList() {
         System.out.println("\n1. Ifad Suji\nPer Kg: 64 BDT\n");
         System.out.println("\n2. Teer Semolina Suji\nPer Kg: 64 BDT\n");
@@ -186,22 +202,7 @@ public class GroceryMain {
         System.out.println("\n2. Fit Food Beshon\nPer Kg: 516 BDT\n");
         System.out.println("\n3. BPM Mashkalai Bason\nPer Kg: 220 BDT\n\n");
     }
-    public void edibleOilList() {
-        System.out.println("\n1.  Saffola Active Plus Edible Oil\nPer litre: 254  BDT\n");
-        System.out.println("\n2.  King's Sunflower Oil\nPer litre: 270  BDT\n");
-        System.out.println("\n3.  Rupchanda Soyabean Oil\nPer litre: 152  BDT\n");
-        System.out.println("\n4.  Pusti Soyabean Oil\nPer litre: 150  BDT\n");
-        System.out.println("\n5.  Olitalia Sunflower Oil\nPer litre: 325  BDT\n");
-        System.out.println("\n6.  Pran Mustard Oil\nPer litre: 270  BDT\n");
-        System.out.println("\n7.  Dhakaiya Black Seed Oil\nPer litre: 1850 BDT\n");
-        System.out.println("\n8.  Shera Bangla Pure Mustard Oil\nPer litre: 225  BDT\n");
-        System.out.println("\n9. Fresh Mustard Oil\nPer litre: 270  BDT\n");
-        System.out.println("\n10. Sajeeb Mustard Oil\nPer litre: 270  BDT\n");
-        System.out.println("\n11. Shaad Mustard Oil\nPer litre: 260  BDT\n");
-        System.out.println("\n12. Fortune Rice Bran Oil\nPer litre: 195  BDT\n");
-        System.out.println("\n13. Teer Soyabean Oil\nPer litre: 145  BDT\n");
-        System.out.println("\n14. Radhuni Pure Mustard Oil\nPer litre: 270  BDT\n\n");
-    }
+
     public void VinegarList() {
         System.out.println("\n1. BD Vinegar \nPer litre: 85  BDT\n");
         System.out.println("\n2. Bragg Apple Cider Vinegar\nPer litre: 560 BDT\n");
@@ -212,20 +213,8 @@ public class GroceryMain {
         System.out.println("\n7. Heinz White Vinegar\nPer litre: 420 BDT\n");
         System.out.println("\n8. Borges Apple Cider Vinegar\nPer litre: 555 BDT\n\n");
     }
-    public void teaList() {
-        System.out.println("\n1. Brooke Bond Taaza Black Tea\nPer Kg: 500 BDT\n");
-        System.out.println("\n2. Ispahani Mirzapore Best Leaf Tea\nPer Kg: 475 BDT\n");
-        System.out.println("\n3. Nestea Iced Tea Lemon\nPer Kg: 600 BDT\n");
-        System.out.println("\n4. Finlay Premium Tea\nPer Kg: 520 BDT\n");
-        System.out.println("\n5. Muskan BOP Tea\nPer Kg: 360 BDT\n");
-        System.out.println("\n6. Ispahani Zareen Premium Tea\nPer Kg: 600 BDT\n\n");
-    }
-    public void teaBagList() {
-        System.out.println("\n1. Ispahani Mirzapore Tea Bag\nPer 50 pcs: 85  BDT\n");
-        System.out.println("\n2. Kazi & Kazi Green Tea\nPer 50 pcs: 210 BDT\n");
-        System.out.println("\n3. Tetley Premium Tea Bags\nPer 50 pcs: 75  BDT\n");
-        System.out.println("\n4. Finlays Pure Green Tea\nPer 50 pcs: 110 BDT\n\n");
-    }
+
+
     public void vermicelliList() {
         System.out.println("\n1. Cock Vermicelli\nPer Kg: 175 BDT\n");
         System.out.println("\n2. Dekko Vermicelli Shemai\nPer Kg: 145 BDT\n");
@@ -243,23 +232,7 @@ public class GroceryMain {
         System.out.println("\n4. Peanut Peeled (Vaja Cheena Badam)\nPer Kg: 390  BDT\n");
         System.out.println("\n5. Pistachios (Pesta Badam)\nPer Kg: 2190 BDT\n\n");
     }
-    public void biscuitList() {
-        System.out.println("\n1.  Olympic Premium Energy Plus Biscuit\nPer 500 gm: 85  BDT\n");
-        System.out.println("\n2.  Belleame Cremo Vanilla Biscuit\nPer 500 gm: 165 BDT\n");
-        System.out.println("\n3.  Haque Milk Chocolate Digestive Biscuit\nPer 500 gm: 120 BDT\n");
-        System.out.println("\n4.  Cocola Champion Chocolate Cream Biscuit\nPer 500 gm: 100 BDT\n");
-        System.out.println("\n5.  Olympic Pineapple Cream Biscuit\nPer 500 gm: 90  BDT\n");
-        System.out.println("\n6.  Pran Potata Spicy Biscuit\nPer 500 gm: 125 BDT\n");
-        System.out.println("\n7.  Olympic Malai Cream Energy Plus Biscuit\nPer 500 gm: 88  BDT\n");
-        System.out.println("\n8.  Olympic Nutty Real Peanut Biscuit\nPer 500 gm: 95  BDT\n");
-        System.out.println("\n9.  Fit Crakers Masala Biscuit\nPer 500 gm: 95  BDT\n");
-        System.out.println("\n10. Danish Doreo Black Chocolate Sandwich Biscuit\nPer 500 gm: 180 BDT\n");
-        System.out.println("\n11. Ifad Choco Delight Biscuit\nPer 500 gm: 100 BDT\n");
-        System.out.println("\n12. Cocola Lexus Vegetable Biscuit\nPer 500 gm: 115 BDT\n");
-        System.out.println("\n13. Olympic Milk Plus Biscuit\nPer 500 gm: 75  BDT\n");
-        System.out.println("\n14. Olympic Tip Biscuit\nPer 500 gm: 100 BDT\n");
-        System.out.println("\n15. Cadbury Oreo Original Cream Biscuit\nPer 500 gm: 230 BDT\n\n");
-    }
+
     public void noodlesList() {
         System.out.println("\n1.  Cocola Egg Noodles\nPer pack: 18 BDT\n");
         System.out.println("\n2.  Nestle Maggi 2-Minute Masala Instant Noodles\nPer pack: 16 BDT\n");
@@ -295,94 +268,6 @@ public class GroceryMain {
         System.out.println("\n6. Clemon\nPer litre: 45 BDT\n");
         System.out.println("\n7. Miranda Orange\nPer litre: 50 BDT\n\n");
     }
-    /*public static void main(String[] args){
-
-        System.out.println("Menu");
-        System.out.println("1. Grocery");
-        System.out.println("Choose Option: ");
-        int option;
-        option = input.nextInt();
-        if(option == 1){
-            Grocery.groceryTypes();
-            System.out.println("Choose another Option: ");
-            int option2 = input.nextInt();
-            if (option2 == 1){
-                Groceries listrice = new GroceriesInfo();
-                listrice.riceList();
-            }
-            else if (option2 == 2){
-                Groceries listdal = new GroceriesInfo();
-                listdal.dalList();
-            }
-            else if (option2 == 3){
-                Groceries listsalt = new GroceriesInfo();
-                listsalt.saltList();
-            }
-            else if (option2 == 4){
-                Groceries listflour = new GroceriesInfo();
-                listflour.flourList();
-            }
-            else if (option2 == 5){
-                Groceries listmasala = new GroceriesInfo();
-                listmasala.masalaList();
-            }
-            else if(option2 == 6){
-                Groceries listsuji = new GroceriesInfo();
-                listsuji.sujiList();
-            }
-            else if (option2 == 7){
-                Groceries listegg = new GroceriesInfo();
-                listegg.eggList();
-            }
-            else if (option2 == 8){
-                Groceries listpeaflour = new GroceriesInfo();
-                listpeaflour.peaFlourList();
-            }
-            else if(option2 == 9){
-                Groceries listedibleoil = new GroceriesInfo();
-                listedibleoil.edibleOilList();
-            }
-            else if (option2 == 10){
-                Groceries listvinegar = new GroceriesInfo();
-                listvinegar.VinegarList();
-            }
-            else if (option2 == 11){
-                Groceries listteabag = new GroceriesInfo();
-                listteabag.teaBagList();
-            }
-            else if (option2 == 12){
-                Groceries listteapoly = new GroceriesInfo();
-                listteapoly.teaList();
-            }
-            else if (option2 == 13){
-                Groceries listvermicelli = new GroceriesInfo();
-                listvermicelli.vermicelliList();
-            }
-            else if (option2 == 14){
-                Groceries listpeanut = new GroceriesInfo();
-                listpeanut.peanutList();
-            }
-            else if (option2 == 15){
-                Groceries listbiscuit = new GroceriesInfo();
-                listbiscuit.biscuitList();
-            }
-            else if (option2 == 16){
-                Groceries listnoodles = new GroceriesInfo();
-                listnoodles.noodlesList();
-            }
-            else if (option2 == 17){
-                Groceries listpowmilk = new GroceriesInfo();
-                listpowmilk.powderMilkList();
-            }
-            else if (option2 == 18){
-                Groceries listsoftdrinks = new GroceriesInfo();
-                listsoftdrinks.softDrinksList();
-            }
-            else{
-                System.out.println("\nInvalid number\n\n");
-            }
-        }
-    }*/
 
     public void BackGroMain(){
         System.out.println("Press '1' for Back else Main Menu: ");
@@ -391,6 +276,7 @@ public class GroceryMain {
         if (n == 1) {
             GroMain();
         }
+
     }
 
 }
